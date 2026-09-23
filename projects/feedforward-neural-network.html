@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Feedforward Neural Network from Scratch — Khushi Panchotiya</title>
+<meta name="description" content="A feedforward neural network built from first principles in NumPy — forward pass, backprop, and SGD with momentum." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg__slide" data-bg="1" style="opacity:1"></div>
+  <div class="bg__scrim"></div>
+</div>
+
+<header class="project-hero">
+  <a class="back" href="../index.html#projects">&larr; Back to portfolio</a>
+  <h1>Feedforward Neural Network from Scratch</h1>
+  <div class="card__tags">
+    <span>Python</span><span>NumPy</span><span>Deep Learning</span><span>Backprop</span>
+  </div>
+  <div class="project-links">
+    <a class="btn" href="https://github.com/Khushi-panchotiya/Feedforward-Neural-Network-from-Scratch" target="_blank" rel="noopener">GitHub repo</a>
+  </div>
+</header>
+
+<figure class="project-cover">
+  <img src="../assets/projects/feedforward-neural-network.png" alt="Feedforward Neural Network from Scratch cover"
+       onerror="this.style.display='none'" />
+</figure>
+
+<article class="project-body">
+  <h2>What it is</h2>
+  <p>
+    A feedforward neural network built entirely from first principles in NumPy &mdash; no
+    autograd, no high-level frameworks &mdash; to demonstrate a working understanding of the
+    maths underneath modern deep learning.
+  </p>
+
+  <h2>Why I built it</h2>
+  <p>
+    Libraries like PyTorch and scikit-learn hide how a model actually learns. I wanted to
+    close the gap between <em>using</em> a network and <em>understanding</em> one by deriving
+    and coding every step myself.
+  </p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>Manual forward pass: linear layers with ReLU hidden activations and a softmax output.</li>
+    <li>Cross-entropy loss paired with softmax, with gradients derived by hand via the chain rule.</li>
+    <li>Backpropagation and a from-scratch SGD optimizer, then extended with momentum.</li>
+    <li>Trained on the Breast Cancer Wisconsin dataset (569 samples, 30 features) and benchmarked against scikit-learn's <code>MLPClassifier</code> on an identical split.</li>
+  </ul>
+
+  <h2>What I learned</h2>
+  <p>
+    Where the accuracy gap against a library model really comes from &mdash; weight
+    initialization, optimizer sophistication (Adam vs. plain SGD), and regularization &mdash;
+    and why momentum measurably speeds up convergence.
+  </p>
+</article>
+
+</body>
+</html>

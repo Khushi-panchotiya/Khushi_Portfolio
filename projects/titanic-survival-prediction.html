@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Titanic Survival Prediction — Khushi Panchotiya</title>
+<meta name="description" content="My first end-to-end machine learning project: predicting Titanic survival with XGBoost." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg__slide" data-bg="1" style="opacity:1"></div>
+  <div class="bg__scrim"></div>
+</div>
+
+<header class="project-hero">
+  <a class="back" href="../index.html#projects">&larr; Back to portfolio</a>
+  <h1>Titanic Survival Prediction</h1>
+  <div class="card__tags">
+    <span>Python</span><span>XGBoost</span><span>scikit-learn</span><span>Pandas</span>
+  </div>
+  <div class="project-links">
+    <a class="btn" href="https://github.com/Khushi-panchotiya/titanic-survival-prediction" target="_blank" rel="noopener">GitHub repo</a>
+  </div>
+</header>
+
+<figure class="project-cover">
+  <img src="../assets/projects/titanic-survival-prediction.png" alt="Titanic Survival Prediction cover"
+       onerror="this.style.display='none'" />
+</figure>
+
+<article class="project-body">
+  <h2>What it is</h2>
+  <p>
+    My first end-to-end machine learning project: predicting which passengers survived
+    the Titanic from the classic Kaggle dataset. The goal was less about the leaderboard
+    and more about walking the full pipeline once, carefully, on my own.
+  </p>
+
+  <h2>Why I built it</h2>
+  <p>
+    I wanted to move past tutorials and actually own every step &mdash; from raw CSV to a
+    trained, evaluated model &mdash; so I could see where accuracy really comes from.
+  </p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>Full pipeline: EDA &rarr; cleaning &rarr; feature engineering &rarr; modeling &rarr; evaluation.</li>
+    <li>Engineered features that carried most of the signal: Title, FamilySize, IsWomanOrChild, RichWoman.</li>
+    <li>Handled missing values and categorical encoding before modeling.</li>
+    <li>XGBoost tuned with GridSearchCV, reaching 82.12% accuracy.</li>
+  </ul>
+
+  <h2>What I learned</h2>
+  <p>
+    Feature engineering moved the needle far more than model choice. I also got comfortable
+    with the mechanics of cross-validated hyperparameter search and reading a full ML
+    pipeline end to end.
+  </p>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neuroevolution Lab: CartPole — Khushi Panchotiya</title>
+<meta name="description" content="An interactive Streamlit app that solves CartPole-v1 with Evolutionary Strategies." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg__slide" data-bg="1" style="opacity:1"></div>
+  <div class="bg__scrim"></div>
+</div>
+
+<header class="project-hero">
+  <a class="back" href="../index.html#projects">&larr; Back to portfolio</a>
+  <h1>Neuroevolution Lab: CartPole</h1>
+  <div class="card__tags">
+    <span>Python</span><span>NumPy</span><span>Gymnasium</span><span>Streamlit</span>
+  </div>
+  <div class="project-links">
+    <a class="btn" href="https://github.com/Khushi-panchotiya/cartPole" target="_blank" rel="noopener">GitHub repo</a>
+  </div>
+</header>
+
+<figure class="project-cover">
+  <img src="../assets/projects/neuroevolution-cartpole.png" alt="Neuroevolution Lab: CartPole cover"
+       onerror="this.style.display='none'" />
+</figure>
+
+<article class="project-body">
+  <h2>What it is</h2>
+  <p>
+    An interactive web app that demonstrates Neuroevolution &mdash; Evolutionary Strategies &mdash;
+    solving the classic CartPole-v1 control problem from OpenAI Gymnasium. Built with
+    Grishma Makwana.
+  </p>
+
+  <h2>Why I built it</h2>
+  <p>
+    To make a black-box optimization method tangible: you watch the agent learn to balance
+    the pole in real time and see how each hyperparameter changes that.
+  </p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>A population of neural-network weight vectors is generated and perturbed with random noise.</li>
+    <li>Each agent is scored by how long it keeps the pole balanced.</li>
+    <li>Base weights are nudged toward the highest-performing mutations &mdash; the Evolutionary Strategies update.</li>
+    <li>Streamlit UI with live reward graphs and on-the-fly control of population size, mutation strength, and learning rate.</li>
+  </ul>
+
+  <h2>What I learned</h2>
+  <p>
+    How gradient-free optimization can train a policy without backprop, and how population
+    size and mutation strength trade off exploration against stable convergence.
+  </p>
+</article>
+
+</body>
+</html>

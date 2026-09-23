@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khushi Panchotiya — Portfolio</title>
+<meta name="description" content="Portfolio of Khushi Panchotiya: builder, problem solver, and lover of quiet nature." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ FULL-BLEED PHOTO BACKGROUND ============ -->
+<div class="bg" aria-hidden="true">
+  <div class="bg__slide" data-bg="1"></div>
+  <div class="bg__slide" data-bg="2"></div>
+  <div class="bg__slide" data-bg="3"></div>
+  <div class="bg__scrim"></div>
+</div>
+
+<!-- ============ PHOTO GALLERY (top-left) ============ -->
+<button class="gallery-tab" id="galleryTab" aria-label="Open photo gallery">
+  <span class="gallery-tab__stack">
+    <span class="gallery-tab__photo"></span>
+    <span class="gallery-tab__photo"></span>
+    <span class="gallery-tab__photo"></span>
+  </span>
+  <span class="gallery-tab__label">Gallery</span>
+</button>
+
+<div class="gallery-overlay" id="galleryOverlay" aria-hidden="true">
+  <div class="gallery-panel" role="dialog" aria-modal="true" aria-label="Photo gallery">
+    <div class="gallery-panel__head">
+      <h2>Cool images I just want to share</h2>
+      <button class="gallery-close" id="galleryClose" aria-label="Close gallery">&times;</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" alt="" />
+  <p id="lightboxCaption"></p>
+</div>
+
+<!-- ============ LAST UPDATED (top-right) ============ -->
+<div class="updated" id="updated">
+  Last updated <time datetime="2026-08-29">29 Aug 2026</time>
+</div>
+
+<!-- ============ ISLAND NAV (horizontal) ============ -->
+<nav class="island" id="island" aria-label="Section navigation">
+  <ul class="island__menu" id="islandMenu">
+    <li><a href="#home" data-nav>Home</a></li>
+    <li><a href="#projects" data-nav>Projects</a></li>
+    <li><a href="#experience" data-nav>Experience &amp; Certifications</a></li>
+    <li><a href="#coding" data-nav>Code</a></li>
+    <li><a href="#college" data-nav>College</a></li>
+    <li><a href="#contact" data-nav>Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="section" data-bg="1">
+    <div class="wrap">
+      <h2 class="eyebrow reveal">Khushi Panchotiya</h2>
+      <h1 class="display" data-tw>
+        <span>Beyond the noise,</span>
+        <span class="display--muted">I build calm, useful things.</span>
+      </h1>
+      <p class="lede reveal">
+        I&rsquo;m a Data Scientist who likes turning messy data into simple,
+        understandable insights and actionable recommendations. I care about data quality and the stories it tells.
+      </p>
+      <div class="loves reveal">
+        <div><h3>What I do</h3><p>Data analysis, machine learning, data visualization.</p></div>
+        <div><h3>What I love</h3><p>Long walks, mountains and rivers and quiet mornings.</p></div>
+      </div>
+      <a href="#projects" class="btn reveal" data-nav>See my work</a>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section" data-bg="1">
+    <div class="wrap">
+      <h2 class="display display--sm reveal">Featured projects</h2>
+      <p class="lede reveal">Three things I&rsquo;ve built and can talk about for hours.</p>
+      <div class="featured" id="featuredProjects"></div>
+
+      <h3 class="sub-head reveal">More from my GitHub</h3>
+      <p class="lede lede--sm reveal">If you want to see more of my work, check out my GitHub profile.</p>
+      <div class="marquee reveal" id="projectMarquee">
+        <div class="marquee__track" id="marqueeTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE & CERTIFICATIONS ===== -->
+  <section id="experience" class="section" data-bg="2">
+    <div class="wrap">
+      <h2 class="display display--sm reveal">Work experience</h2>
+      <ol class="timeline" id="timeline"></ol>
+
+      <h3 class="sub-head reveal">Certifications</h3>
+      <p class="lede lede--sm reveal">Courses I&rsquo;ve finished end to end.</p>
+      <div class="marquee marquee--ltr reveal" id="certMarquee">
+        <div class="marquee__track" id="certTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CODING PROFILES ===== -->
+  <section id="coding" class="section" data-bg="2">
+    <div class="wrap">
+      <h2 class="display display--sm reveal">Where I practice</h2>
+      <p class="lede reveal">Two places I keep score against myself.</p>
+      <div class="profiles reveal">
+        <a class="profile" href="https://github.com/Khushi-panchotiya" target="_blank" rel="noopener">
+          <h3>GitHub</h3>
+          <p>Open source, experiments, and everything I&rsquo;m tinkering with. Repos on web apps, tooling, and algorithm notes.</p>
+          <span class="profile__link">github.com/Khushi-panchotiya &rarr;</span>
+        </a>
+        <a class="profile" href="https://leetcode.com/u/Panchotiya/" target="_blank" rel="noopener">
+          <h3>LeetCode</h3>
+          <p>Daily-ish problem solving. Focus on graphs, DP, and clean, readable solutions rather than one-liners.</p>
+          <span class="profile__link">leetcode.com/Panchotiya &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLLEGE ===== -->
+  <section id="college" class="section" data-bg="3">
+    <div class="wrap">
+      <h2 class="display display--sm reveal">Lab work &amp; coursework</h2>
+      <p class="lede reveal">Selected labs and academic projects from my degree.</p>
+      <div class="cards" id="labCards"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section--contact" data-bg="3">
+    <div class="wrap">
+      <h2 class="display display--sm reveal">Amazing! you have made it this far. Let's connect.</h2>
+      <p class="lede" data-tw>Have an idea, a role, or just want to say hello? Mail me directly. I read everything.</p>
+      <a class="btn btn--big reveal" id="mailBtn" target="_blank" rel="noopener"
+         href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khpanchotiya108@gmail.com&amp;su=Hello%20from%20your%20portfolio">khpanchotiya108@gmail.com</a>
+      <p class="contact-alt reveal">
+        No mail app opens?
+        <button type="button" id="copyEmail">Copy address</button>
+      </p>
+      <div class="socials reveal">
+        <a href="https://www.linkedin.com/in/khushi-p-7b919a323/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/KhushiPanchotiy" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://github.com/Khushi-panchotiya" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot reveal">&copy; <span id="year"></span> Khushi Panchotiya. Built with quiet and care.</p>
+  </section>
+
+</main>
+
+<script src="js/gallery.js"></script>
+<script src="js/content.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
